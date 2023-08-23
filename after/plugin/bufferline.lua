@@ -1,4 +1,3 @@
-lua <<EOF
   -- Set up nvim-cmp.
   local cmp = require'cmp'
 
@@ -67,4 +66,4 @@ lua <<EOF
   require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
     capabilities = capabilities
   }
-EOF
+

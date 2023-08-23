@@ -14,6 +14,10 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'nvim-treesitter/nvim-treesitter'
 
 
+ Plug 'williamboman/mason.nvim'
+ Plug 'williamboman/mason-lspconfig.nvim'
+
+
 vim.call('plug#end')
 
 vim.cmd [[

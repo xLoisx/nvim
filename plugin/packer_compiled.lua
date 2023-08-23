@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",

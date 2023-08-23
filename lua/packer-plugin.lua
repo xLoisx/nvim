@@ -30,6 +30,9 @@ use {'akinsho/bufferline.nvim', tag = "v3.*"}
   --CMP
 use { 'saadparwaiz1/cmp_luasnip' }
 
+ --Lsp
+ use 'neovim/nvim-lspconfig'
+
   -- Themes
   use({ 'rose-pine/neovim', as = 'rose-pine' })
 
