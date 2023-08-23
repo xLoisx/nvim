@@ -17,5 +17,20 @@ api.nvim_set_keymap('n', '<leader>P', '"+P', options)
 api.nvim_set_keymap('v', '<leader>p', '"+p', options)
 api.nvim_set_keymap('v', '<leader>P', '"+P', options)
 
+-- Open explorer.exe in current directory
+api.nvim_set_keymap('n', '<leader>exp', ':!explorer.exe . <cr><cr>', options)
+
+
+
+-- Enable NvimTree as a file explorer
+api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+
+-- Set the working directory of NvimTree to the current directory
+vim.g.nvim_tree_auto_open = 1
+vim.g.nvim_tree_auto_close = 1
+
 -------- PACKER --------
 require 'packer-plugin'
+
+------- PLUG ----------
+require 'plug'
