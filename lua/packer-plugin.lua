@@ -45,5 +45,14 @@ use { 'saadparwaiz1/cmp_luasnip' }
         end,
     }
 
+    -- Rootekr
+use {
+    'notjedi/nvim-rooter.lua',
+    config = function() require'nvim-rooter'.setup() end
+}
+
+-- Scrollbar
+use("petertriho/nvim-scrollbar")
+
 end)
 

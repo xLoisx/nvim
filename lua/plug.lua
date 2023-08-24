@@ -17,6 +17,7 @@ Plug 'nvim-treesitter/nvim-treesitter'
  Plug 'williamboman/mason.nvim'
  Plug 'williamboman/mason-lspconfig.nvim'
 
+Plug 'notjedi/nvim-rooter.lua'
 
 vim.call('plug#end')
 
