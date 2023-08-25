@@ -19,6 +19,10 @@ Plug 'nvim-treesitter/nvim-treesitter'
 
 Plug 'notjedi/nvim-rooter.lua'
 
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+-- " or                                , { 'branch': '0.1.x' }
+
 vim.call('plug#end')
 
 vim.cmd [[
