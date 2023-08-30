@@ -22,7 +22,9 @@ return require('packer').startup(function()
 
 use 'nvim-tree/nvim-web-devicons'
 	use { 'kyazdani42/nvim-tree.lua', tag = 'nightly' }
-  use { 'nvim-telescope/telescope.nvim', tag = '0.1.x' }
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.x',
+  requires = { {'nvim-lua/plenary.nvim'} }
+  }
   
   -- Bufferline
 use {'akinsho/bufferline.nvim', tag = "v3.*"}
@@ -34,7 +36,7 @@ use { 'saadparwaiz1/cmp_luasnip' }
  use 'neovim/nvim-lspconfig'
 
   -- Themes
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
+
 
   --treesitter
      use {
@@ -50,9 +52,16 @@ use {
     'notjedi/nvim-rooter.lua',
     config = function() require'nvim-rooter'.setup() end
 }
+use { "ibhagwan/fzf-lua",
+  -- optional for icon support
+  requires = { "nvim-tree/nvim-web-devicons" }
+}
 
 -- Scrollbar
 use("petertriho/nvim-scrollbar")
+
+ use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+
 
 end)
 

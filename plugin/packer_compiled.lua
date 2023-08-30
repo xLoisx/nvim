@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["fzf-lua"] = {
+    loaded = true,
+    path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fzf-lua",
+    url = "https://github.com/ibhagwan/fzf-lua"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
@@ -120,10 +125,20 @@ _G.packer_plugins = {
     path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
   ["rose-pine"] = {
     loaded = true,
     path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rose-pine",
     url = "https://github.com/rose-pine/neovim"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

@@ -13,15 +13,20 @@ Plug 'hrsh7th/nvim-cmp'
 
 Plug 'nvim-treesitter/nvim-treesitter'
 
-
- Plug 'williamboman/mason.nvim'
- Plug 'williamboman/mason-lspconfig.nvim'
-
 Plug 'notjedi/nvim-rooter.lua'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 -- " or                                , { 'branch': '0.1.x' }
+Plug "ibhagwan/fzf-lua"
+
+Plug 'nvim-telescope/telescope-fzf-native.nvim'
+
+Plug 'folke/tokyonight.nvim'
+
+Plug 'lukas-reineke/indent-blankline.nvim'
+
+Plug 'junegunn/vim-easy-align'
 
 vim.call('plug#end')
 

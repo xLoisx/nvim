@@ -44,8 +44,8 @@ telescope.setup {
 }
 
 -- Load extensions
-telescope.load_extension('fzf')
-telescope.load_extension('luasnip')
+--telescope.load_extension('fzf')
+--telescope.load_extension('luasnip')
 
 -- File Pickers
 api.nvim_set_keymap('n', '<leader>ff', ':lua require("telescope.builtin").find_files() <cr>', { noremap = true })
@@ -63,3 +63,7 @@ api.nvim_set_keymap('n', '<leader>snip', ':Telescope luasnip <cr>', { noremap = 
 
 -- Misc
 api.nvim_set_keymap('n', '<leader>fr', ':Telescope resume <cr>', { noremap = true })
+
+
+
+
