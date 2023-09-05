@@ -20,6 +20,8 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+	use 'numToStr/Comment.nvim'
+
 use 'nvim-tree/nvim-web-devicons'
 	use { 'kyazdani42/nvim-tree.lua', tag = 'nightly' }
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.x',
@@ -37,16 +39,6 @@ use { 'saadparwaiz1/cmp_luasnip' }
 
   -- Themes
 
-
-  --treesitter
-     use {
-        'nvim-treesitter/nvim-treesitter',
-        run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end,
-    }
-
     -- Rootekr
 use {
     'notjedi/nvim-rooter.lua',
@@ -57,11 +49,13 @@ use { "ibhagwan/fzf-lua",
   requires = { "nvim-tree/nvim-web-devicons" }
 }
 
+use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}) 
 -- Scrollbar
 use("petertriho/nvim-scrollbar")
 
  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
+ use 'xorid/swap-split.nvim'
 
 end)
 

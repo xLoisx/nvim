@@ -1,9 +1,11 @@
 o = vim.o
 api = vim.api
+opt = vim.opt
 options = { noremap = true}
 
 o.number=true
 o.relativenumber=true
+o.hlsearch=false
 
 -- Copy to system clipboard
 api.nvim_set_keymap('v', '<leader>y', '"+y', options)
@@ -21,6 +23,11 @@ api.nvim_set_keymap('v', '<leader>P', '"+P', options)
 api.nvim_set_keymap('n', '<leader>exp', ':!explorer.exe . <cr><cr>', options)
 
 
+api.nvim_set_keymap('n', '<leader>w', ':w <cr>', options)
+api.nvim_set_keymap('n', '<leader>q', ':q <cr>', options)
+
+api.nvim_set_keymap('i', '<c-c>', '</<c-x><c-o><c-x>', { noremap = true, silent = true })
+
 
 -- Enable NvimTree as a file explorer
 api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
@@ -29,13 +36,22 @@ api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, s
 vim.g.nvim_tree_auto_open = 1
 vim.g.nvim_tree_auto_close = 1
 
+-- Faster open splits
+api.nvim_set_keymap('n', '<leader>vs', ':vsplit <cr>', options)
+api.nvim_set_keymap('n', '<leader>sp', ':split <cr>', options)
+
+-- Backup file
+o.swapfile=false
+o.backup=false
+o.writebackup=false
+o.undofile=true
+opt.undodir=vim.fn.expand("~/.config/nvim-undo")
+
 -------- PACKER --------
 require 'packer-plugin'
 
 ------- PLUG ----------
 require 'plug'
-
-
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.zimbu = {

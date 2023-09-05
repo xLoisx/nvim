@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
@@ -130,10 +135,10 @@ _G.packer_plugins = {
     path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["rose-pine"] = {
+  ["swap-split.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rose-pine",
-    url = "https://github.com/rose-pine/neovim"
+    path = "C:\\Users\\lois.santos\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\swap-split.nvim",
+    url = "https://github.com/xorid/swap-split.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,

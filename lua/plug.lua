@@ -11,8 +11,6 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 
 
-Plug 'nvim-treesitter/nvim-treesitter'
-
 Plug 'notjedi/nvim-rooter.lua'
 
 Plug 'nvim-lua/plenary.nvim'
@@ -22,11 +20,26 @@ Plug "ibhagwan/fzf-lua"
 
 Plug 'nvim-telescope/telescope-fzf-native.nvim'
 
-Plug 'folke/tokyonight.nvim'
-
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'junegunn/vim-easy-align'
+
+Plug 'tpope/vim-fugitive'
+
+Plug 'f-person/git-blame.nvim'
+
+Plug 'ThePrimeagen/vim-be-good'
+
+Plug 'tmsvg/pear-tree'
+
+Plug 'tpope/vim-surround'
+
+-- Plug 'EdenEast/nightfox.nvim'  
+
+Plug 'folke/tokyonight.nvim'
+
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'neovim/nvim-lspconfig'
 
 vim.call('plug#end')
 
