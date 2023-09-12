@@ -15,31 +15,41 @@ Plug 'notjedi/nvim-rooter.lua'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
--- " or                                , { 'branch': '0.1.x' }
-Plug "ibhagwan/fzf-lua"
 
 Plug 'nvim-telescope/telescope-fzf-native.nvim'
-
-Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'junegunn/vim-easy-align'
 
 Plug 'tpope/vim-fugitive'
 
-Plug 'f-person/git-blame.nvim'
+Plug 'L3MON4D3/LuaSnip'
 
-Plug 'ThePrimeagen/vim-be-good'
+Plug 'saadparwaiz1/cmp_luasnip'
+
+Plug 'f-person/git-blame.nvim'
 
 Plug 'tmsvg/pear-tree'
 
 Plug 'tpope/vim-surround'
 
+Plug 'tpope/vim-repeat'
+
+Plug 'psliwka/vim-smoothie'
+
+Plug 'lukas-reineke/indent-blankline.nvim'
+
+Plug('mg979/vim-visual-multi', {branch = 'master'})
+
+Plug ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+
 -- Plug 'EdenEast/nightfox.nvim'  
 
 Plug 'folke/tokyonight.nvim'
+Plug 'junegunn/fzf'
 
-Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
+
+Plug 'vim-ruby/vim-ruby'
 
 vim.call('plug#end')
 

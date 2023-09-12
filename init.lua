@@ -40,12 +40,19 @@ vim.g.nvim_tree_auto_close = 1
 api.nvim_set_keymap('n', '<leader>vs', ':vsplit <cr>', options)
 api.nvim_set_keymap('n', '<leader>sp', ':split <cr>', options)
 
+api.nvim_set_keymap('n', '<enter>', 'o<esc>', options)
+api.nvim_set_keymap('n', 's<enter>', 'o<esc>', options)
+
 -- Backup file
 o.swapfile=false
 o.backup=false
 o.writebackup=false
 o.undofile=true
 opt.undodir=vim.fn.expand("~/.config/nvim-undo")
+o.foldmethod='marker'
+o.foldlevel=99
+o.foldenable=false
+
 
 -------- PACKER --------
 require 'packer-plugin'
@@ -65,3 +72,7 @@ parser_config.zimbu = {
   },
   filetype = "zu", -- if filetype does not match the parser name
 }
+
+vim.cmd[[
+let g:loaded_ruby_provider = 0
+]]
