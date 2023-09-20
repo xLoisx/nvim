@@ -36,20 +36,19 @@ Plug 'tpope/vim-repeat'
 
 Plug 'psliwka/vim-smoothie'
 
-Plug 'lukas-reineke/indent-blankline.nvim'
-
 Plug('mg979/vim-visual-multi', {branch = 'master'})
 
 Plug ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
--- Plug 'EdenEast/nightfox.nvim'  
+Plug 'zivyangll/git-blame.vim'
 
-Plug 'folke/tokyonight.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+
+Plug 'bluz71/vim-nightfly-colors'
+
 Plug 'junegunn/fzf'
 
 Plug 'neovim/nvim-lspconfig'
-
-Plug 'vim-ruby/vim-ruby'
 
 vim.call('plug#end')
 

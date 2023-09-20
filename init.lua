@@ -1,18 +1,33 @@
 o = vim.o
 api = vim.api
 opt = vim.opt
-options = { noremap = true}
-
+options = { noremap = true }
 o.number=true
 o.relativenumber=true
 o.hlsearch=false
+o.foldmethod='marker'
+o.foldlevel=99
+o.foldenable=false
+o.autoindent=true
+o.wrap=false
+o.tabstop=2                           					-- Width of tab character
+o.softtabstop=2                       					-- Fine tunes the amount of white space to be added
+o.shiftwidth=2                        					-- Number of spaces to use for autoindenting
+o.expandtab=true 
+
+
+-- Backup file
+o.swapfile=false
+o.backup=false
+o.writebackup=false
+o.undofile=true
+opt.undodir=vim.fn.expand("~/.config/nvim-undo")
 
 -- Copy to system clipboard
 api.nvim_set_keymap('v', '<leader>y', '"+y', options)
 api.nvim_set_keymap('n', '<leader>Y', '"+yg_', options)
 api.nvim_set_keymap('n', '<leader>y', '"+y', options)
 api.nvim_set_keymap('n', '<leader>yy', '"+yy', options)
-
 -- Paste from system clipboard
 api.nvim_set_keymap('n', '<leader>p', '"+p', options)
 api.nvim_set_keymap('n', '<leader>P', '"+P', options)
@@ -43,15 +58,8 @@ api.nvim_set_keymap('n', '<leader>sp', ':split <cr>', options)
 api.nvim_set_keymap('n', '<enter>', 'o<esc>', options)
 api.nvim_set_keymap('n', 's<enter>', 'o<esc>', options)
 
--- Backup file
-o.swapfile=false
-o.backup=false
-o.writebackup=false
-o.undofile=true
-opt.undodir=vim.fn.expand("~/.config/nvim-undo")
-o.foldmethod='marker'
-o.foldlevel=99
-o.foldenable=false
+api.nvim_set_keymap('n', '<leader>gblame', ':GitBlameToggle <cr>', options)
+
 
 
 -------- PACKER --------
@@ -60,19 +68,4 @@ require 'packer-plugin'
 ------- PLUG ----------
 require 'plug'
 
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.zimbu = {
-  install_info = {
-    url = "~/projects/tree-sitter-zimbu", -- local path or git repo
-    files = {"src/parser.c"}, -- note that some parsers also require src/scanner.c or src/scanner.cc
-    -- optional entries:
-    branch = "main", -- default branch in case of git repo if different from master
-    generate_requires_npm = false, -- if stand-alone parser without npm dependencies
-    requires_generate_from_grammar = false, -- if folder contains pre-generated src/parser.c
-  },
-  filetype = "zu", -- if filetype does not match the parser name
-}
 
-vim.cmd[[
-let g:loaded_ruby_provider = 0
-]]
