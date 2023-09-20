@@ -50,6 +50,8 @@ Plug 'junegunn/fzf'
 
 Plug 'neovim/nvim-lspconfig'
 
+Plug "kyoh86/vim-ripgrep"
+
 vim.call('plug#end')
 
 vim.cmd [[
